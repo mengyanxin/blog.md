@@ -2,9 +2,10 @@
 title: Dozer进行模型转换时格式化 # 这是标题
 tags:   # 这里写的标签会自动汇集到 tags 页面上
 - Java # 可配置多个标签，注意格式
-- Test
+- Dozer
+- mengyan
 categories:
-- go
+- utils
 ---
 ## 模型转换时格式化
 
