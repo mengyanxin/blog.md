@@ -80,3 +80,32 @@ public static void main(String[] args){
 > 5 转化为二进制是 0000 0101，~运算规则是按位取反，那么为 1111 1010，
 > 此时仍为补码，是计算机系统的存储模式，我们需要的结果是需要将补码化为原码，
 > 换算过程：按位取反10000101 再整个+1，故原码为1000 0110 = -6（最高位为负，二进制转化为十进制为6）
+
+### 异或运算符(^)
+> 两个操作数的位中，相同则结果为0，不同则结果为1。
+> {%codeblock%}
+public static void main(String[] args){
+    int x = 15;
+    int y = 2;
+    System.out.println("x^y="+(a^b));//x^y=13
+}
+{%endcodeblock%}
+> *分析上面的程序段：*
+a 的值是15，转换成二进制为1111，而b 的值是2，转换成二进制为0010，
+根据异或的运算规律，可以得出其结果为1101 即13。
+
+### 位移运算符(>>、<<)
+> << (左移) 左移就是向左移位，如果要移动2位那么前面删掉2个0最后面补2个0
+*（注意：前面删两个0只能是在0的前面没有1的地方才可以删）*
+{%codeblock%}
+public static void main(String[] args){
+    int x = 3;
+    System.out.println(x<<2);//12
+    System.out.println(x>>2);//0
+    int y = -3;
+    System.out.println(y<<2);//-12
+    System.out.println(y>>2);//-1
+}
+{%endcodeblock%}
+一个数m左移n位，结果为m乘以2的n次方
+一个数m右移n位，结果为m除以2的n次方
